@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ValidationRules from './lib/validation-rules'
 import utils from './lib/utils'
 
@@ -153,22 +154,22 @@ export default class ReactInputValidation extends React.Component {
 }
 
 ReactInputValidation.propTypes = {
-  onChange: React.PropTypes.func, // function that will set state
-  onKeyPress: React.PropTypes.func, // optional, for handleing keypress on inputs
-  text: React.PropTypes.string,
-  id: React.PropTypes.string,
-  emptyMessage: React.PropTypes.string,
-  errorMessage: React.PropTypes.string,
-  className: React.PropTypes.string,
-  placeholder: React.PropTypes.string,
-  type: React.PropTypes.string, // input type, by default this is 'text'
-  value: React.PropTypes.string.isRequired,
-  validateType: React.PropTypes.oneOf(['email', 'required', 'onlyPositiveNumbers', 'url', 'password', 're_password', 'positiveNumberWithLimit', 'custom']),
-  passwordMinLength: React.PropTypes.number, // use if your validateType = 'password'
-  limitNumber: React.PropTypes.number, // use if your validateType = 'positiveNumberWithLimit'
-  validatePattern: React.PropTypes.string, // use if your validateType = 'custom'
-  relValue: React.PropTypes.string, // use if your validateType = 're_password'
-  withAddon: React.PropTypes.string, // optional, text of addon, use in case you want to have bootstrap inputs with addon icons
-  addonPos: React.PropTypes.string, // position of addon, default is 'right'
-  ref: React.PropTypes.string // always use this for validating (must be unique)
+  onChange: PropTypes.func, // function that will set state
+  onKeyPress: PropTypes.func, // optional, for handleing keypress on inputs
+  text: PropTypes.string,
+  id: PropTypes.string,
+  emptyMessage: PropTypes.string,
+  errorMessage: PropTypes.string,
+  className: PropTypes.string,
+  placeholder: PropTypes.string,
+  type: PropTypes.string, // input type, by default this is 'text'
+  value: PropTypes.string.isRequired,
+  validateType: PropTypes.oneOf(['email', 'required', 'onlyPositiveNumbers', 'url', 'password', 're_password', 'positiveNumberWithLimit', 'custom']),
+  passwordMinLength: PropTypes.number, // use if your validateType = 'password'
+  limitNumber: PropTypes.number, // use if your validateType = 'positiveNumberWithLimit'
+  validatePattern: PropTypes.string, // use if your validateType = 'custom'
+  relValue: PropTypes.string, // use if your validateType = 're_password'
+  withAddon: PropTypes.string, // optional, text of addon, use in case you want to have bootstrap inputs with addon icons
+  addonPos: PropTypes.string, // position of addon, default is 'right'
+  ref: PropTypes.string // always use this for validating (must be unique)
 }

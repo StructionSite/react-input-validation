@@ -8,7 +8,8 @@
     "url": "https://github.com/StructionSite/react-input-validation.git"
   },
   "dependencies": {
-    "classnames": "^2.1.2"
+    "classnames": "^2.1.2",
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.3",

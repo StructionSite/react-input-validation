@@ -20,6 +20,10 @@ var _react = (typeof window !== "undefined" ? window['React'] : typeof global !=
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _libValidationRules = require('./lib/validation-rules');
 
 var _libValidationRules2 = _interopRequireDefault(_libValidationRules);
@@ -212,29 +216,29 @@ var ReactInputValidation = (function (_React$Component) {
 exports['default'] = ReactInputValidation;
 
 ReactInputValidation.propTypes = {
-  onChange: _react2['default'].PropTypes.func, // function that will set state
-  onKeyPress: _react2['default'].PropTypes.func, // optional, for handleing keypress on inputs
-  text: _react2['default'].PropTypes.string,
-  id: _react2['default'].PropTypes.string,
-  emptyMessage: _react2['default'].PropTypes.string,
-  errorMessage: _react2['default'].PropTypes.string,
-  className: _react2['default'].PropTypes.string,
-  placeholder: _react2['default'].PropTypes.string,
-  type: _react2['default'].PropTypes.string, // input type, by default this is 'text'
-  value: _react2['default'].PropTypes.string.isRequired,
-  validateType: _react2['default'].PropTypes.oneOf(['email', 'required', 'onlyPositiveNumbers', 'url', 'password', 're_password', 'positiveNumberWithLimit', 'custom']),
-  passwordMinLength: _react2['default'].PropTypes.number, // use if your validateType = 'password'
-  limitNumber: _react2['default'].PropTypes.number, // use if your validateType = 'positiveNumberWithLimit'
-  validatePattern: _react2['default'].PropTypes.string, // use if your validateType = 'custom'
-  relValue: _react2['default'].PropTypes.string, // use if your validateType = 're_password'
-  withAddon: _react2['default'].PropTypes.string, // optional, text of addon, use in case you want to have bootstrap inputs with addon icons
-  addonPos: _react2['default'].PropTypes.string, // position of addon, default is 'right'
-  ref: _react2['default'].PropTypes.string // always use this for validating (must be unique)
+  onChange: _propTypes2['default'].func, // function that will set state
+  onKeyPress: _propTypes2['default'].func, // optional, for handleing keypress on inputs
+  text: _propTypes2['default'].string,
+  id: _propTypes2['default'].string,
+  emptyMessage: _propTypes2['default'].string,
+  errorMessage: _propTypes2['default'].string,
+  className: _propTypes2['default'].string,
+  placeholder: _propTypes2['default'].string,
+  type: _propTypes2['default'].string, // input type, by default this is 'text'
+  value: _propTypes2['default'].string.isRequired,
+  validateType: _propTypes2['default'].oneOf(['email', 'required', 'onlyPositiveNumbers', 'url', 'password', 're_password', 'positiveNumberWithLimit', 'custom']),
+  passwordMinLength: _propTypes2['default'].number, // use if your validateType = 'password'
+  limitNumber: _propTypes2['default'].number, // use if your validateType = 'positiveNumberWithLimit'
+  validatePattern: _propTypes2['default'].string, // use if your validateType = 'custom'
+  relValue: _propTypes2['default'].string, // use if your validateType = 're_password'
+  withAddon: _propTypes2['default'].string, // optional, text of addon, use in case you want to have bootstrap inputs with addon icons
+  addonPos: _propTypes2['default'].string, // position of addon, default is 'right'
+  ref: _propTypes2['default'].string // always use this for validating (must be unique)
 };
 module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./lib/utils":2,"./lib/validation-rules":3}],2:[function(require,module,exports){
+},{"./lib/utils":2,"./lib/validation-rules":3,"prop-types":undefined}],2:[function(require,module,exports){
 "use strict";
 
 function _bind() {
