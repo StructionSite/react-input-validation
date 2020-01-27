@@ -62,6 +62,11 @@ var ReactInputValidation = (function (_React$Component) {
       return value === '';
     }
   }, {
+    key: 'slugify',
+    value: function slugify(value) {
+      return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    }
+  }, {
     key: 'handleChange',
     value: function handleChange(event) {
       this.setState({
@@ -171,7 +176,7 @@ var ReactInputValidation = (function (_React$Component) {
       return _react2['default'].createElement('input', {
         placeholder: this.props.placeholder,
         className: this.props.className ? this.props.className + ' form-control' : 'form-control',
-        id: this.props.text,
+        id: this.props.id || this.slugify(this.props.text),
         type: this.props.type,
         value: this.props.value,
         onChange: this.handleChange,
@@ -210,6 +215,7 @@ ReactInputValidation.propTypes = {
   onChange: _react2['default'].PropTypes.func, // function that will set state
   onKeyPress: _react2['default'].PropTypes.func, // optional, for handleing keypress on inputs
   text: _react2['default'].PropTypes.string,
+  id: _react2['default'].PropTypes.string,
   emptyMessage: _react2['default'].PropTypes.string,
   errorMessage: _react2['default'].PropTypes.string,
   className: _react2['default'].PropTypes.string,

@@ -22,6 +22,10 @@ export default class ReactInputValidation extends React.Component {
     return value === ''
   }
 
+  slugify (value) {
+    return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+  }
+
   handleChange (event) {
     this.setState({
       value: event.target.value,
@@ -121,7 +125,7 @@ export default class ReactInputValidation extends React.Component {
       <input
         placeholder={this.props.placeholder}
         className={this.props.className ? this.props.className + ' form-control' : 'form-control'}
-        id={this.props.text}
+        id={this.props.id || this.slugify(this.props.text)}
         type={this.props.type}
         value={this.props.value}
         onChange={this.handleChange}
@@ -152,6 +156,7 @@ ReactInputValidation.propTypes = {
   onChange: React.PropTypes.func, // function that will set state
   onKeyPress: React.PropTypes.func, // optional, for handleing keypress on inputs
   text: React.PropTypes.string,
+  id: React.PropTypes.string,
   emptyMessage: React.PropTypes.string,
   errorMessage: React.PropTypes.string,
   className: React.PropTypes.string,
