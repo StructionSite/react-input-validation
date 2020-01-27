@@ -5,8 +5,6 @@ A small validation component for inputs which you can use everywhere and set any
 
 ## Demo & Examples
 
-Live demo: [ggayane.github.io/react-input-validation](http://ggayane.github.io/react-input-validation/)
-
 To build the examples locally, run:
 
 ```
@@ -34,6 +32,7 @@ npm install react-input-validation --save
 var FormInput = require('react-input-validation');
 
 <FormInput
+	id='email_field'
 	text='Label text here'
 	emptyMessage='this field is required'
 	errorMessage='Not valid'
@@ -51,6 +50,7 @@ You can pass the following props to the component:
 
 - **onChange**: function that will give you the value of input
 - **onKeyPress**: optional, for handling keypress on inputs
+- **id**: optional, id of input
 - **text**: text of label
 - **emptyMessage**: this will be appeared when input is empty
 - **errorMessage**: this will be appeared when input is not valid
@@ -77,5 +77,3 @@ To check the validation there is a `isValid()` function which you can call with 
 To build, watch and serve the examples (which will also watch the component source), run `npm start`. If you just want to watch changes to `src` and rebuild `lib`, run `npm run watch` (this is useful if you are working with `npm link`).
 
 ## License
-
-[MIT](https://github.com/Ggayane/react-input-validation/blob/master/license.md)
