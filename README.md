@@ -3,7 +3,18 @@
 A small validation component for inputs which you can use everywhere and set any kind of validation you want to!
 
 
-## Demo & Examples
+## Why StructionSite chose this?
+- Input Component UI/UX meets StructionSite design requirements
+- Validation rules and outputs conincide with the requirements
+- Less npm dependencies - just `classnames` and `prop-types`
+
+
+## Why forked?
+- Some issues needs to be fixed. i,e. Input CSS id violated W3C compliance.
+- [Source Repo](https://github.com/Ggayane/react-input-validation) no longer active for maintenance.
+
+
+## Examples
 
 To build the examples locally, run:
 
@@ -44,7 +55,7 @@ var FormInput = require('react-input-validation');
 	ref='email' />
 ```
 
-## Notes
+## Props
 
 You can pass the following props to the component:
 
