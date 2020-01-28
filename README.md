@@ -4,7 +4,7 @@ A small validation component for inputs which you can use everywhere and set any
 
 
 ## Why StructionSite chose this?
-- Input Component UI/UX meets StructionSite design requirements
+- Input component UI/UX meets StructionSite design requirements
 - Validation rules and outputs coincide with the requirements
 - Less npm dependencies - just `classnames` and `prop-types`
 
