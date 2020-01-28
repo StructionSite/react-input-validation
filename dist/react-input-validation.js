@@ -71,6 +71,11 @@ var ReactInputValidation = (function (_React$Component) {
       return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
     }
   }, {
+    key: 'inputId',
+    value: function inputId() {
+      return this.props.id || this.slugify(this.props.text);
+    }
+  }, {
     key: 'handleChange',
     value: function handleChange(event) {
       this.setState({
@@ -180,7 +185,7 @@ var ReactInputValidation = (function (_React$Component) {
       return _react2['default'].createElement('input', {
         placeholder: this.props.placeholder,
         className: this.props.className ? this.props.className + ' form-control' : 'form-control',
-        id: this.props.id || this.slugify(this.props.text),
+        id: this.inputId(),
         type: this.props.type,
         value: this.props.value,
         onChange: this.handleChange,
@@ -197,7 +202,7 @@ var ReactInputValidation = (function (_React$Component) {
         { className: validateClassName },
         _react2['default'].createElement(
           'label',
-          { className: 'control-label', htmlFor: this.props.text },
+          { className: 'control-label', htmlFor: this.inputId() },
           this.props.text
         ),
         this.props.withAddon ? this.inputWithAddon() : this.regularInput(),

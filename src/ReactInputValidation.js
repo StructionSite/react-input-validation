@@ -27,6 +27,10 @@ export default class ReactInputValidation extends React.Component {
     return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
   }
 
+  inputId () {
+    return this.props.id || this.slugify(this.props.text)
+  }
+
   handleChange (event) {
     this.setState({
       value: event.target.value,
@@ -126,7 +130,7 @@ export default class ReactInputValidation extends React.Component {
       <input
         placeholder={this.props.placeholder}
         className={this.props.className ? this.props.className + ' form-control' : 'form-control'}
-        id={this.props.id || this.slugify(this.props.text)}
+        id={this.inputId()}
         type={this.props.type}
         value={this.props.value}
         onChange={this.handleChange}
@@ -141,7 +145,7 @@ export default class ReactInputValidation extends React.Component {
     return (
       <div className={validateClassName}>
 
-        <label className='control-label' htmlFor={this.props.text}>
+        <label className='control-label' htmlFor={this.inputId()}>
           {this.props.text}
         </label>
 
