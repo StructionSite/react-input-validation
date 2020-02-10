@@ -76,7 +76,6 @@ You can pass the following props to the component:
 - **relValue**: use if your validateType = 're_password'
 - **withAddon**: optional, text of addon, use in case you want to have bootstrap inputs with addon icons
 - **addonPos**: position of addon, default is 'right'
-- **ref**: always use this for validating (must be unique)
 
 To check the validation there is a `isValid()` function which you can call with component ref. For more details take a look at  `_isAllValuesTrue()` function which is in `react-input-validation/example/src/example.js`.
 

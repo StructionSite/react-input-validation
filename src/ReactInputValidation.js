@@ -175,5 +175,4 @@ ReactInputValidation.propTypes = {
   relValue: PropTypes.string, // use if your validateType = 're_password'
   withAddon: PropTypes.string, // optional, text of addon, use in case you want to have bootstrap inputs with addon icons
   addonPos: PropTypes.string, // position of addon, default is 'right'
-  ref: PropTypes.string // always use this for validating (must be unique)
 }

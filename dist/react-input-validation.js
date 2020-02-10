@@ -237,10 +237,9 @@ ReactInputValidation.propTypes = {
   validatePattern: _propTypes2['default'].string, // use if your validateType = 'custom'
   relValue: _propTypes2['default'].string, // use if your validateType = 're_password'
   withAddon: _propTypes2['default'].string, // optional, text of addon, use in case you want to have bootstrap inputs with addon icons
-  addonPos: _propTypes2['default'].string, // position of addon, default is 'right'
-  ref: _propTypes2['default'].string // always use this for validating (must be unique)
-};
+  addonPos: _propTypes2['default'].string };
 module.exports = exports['default'];
+// position of addon, default is 'right'
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./lib/utils":2,"./lib/validation-rules":3,"prop-types":undefined}],2:[function(require,module,exports){
